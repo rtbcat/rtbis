@@ -18,8 +18,18 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-
-  <div class="section hero">
+  <section id="top_nav" class="top-nav">
+    <div class="container">
+      <div class="row">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="privacy.html">Opt-Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section hero">
     <div class="container">
       <div class="row">
         <div class="one-half column">
@@ -35,16 +45,16 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <div class="container">
       <h3 class="section-heading">About Us</h3>
       <p class="section-description">We are a digital media-buying agency with firm roots in direct-mail and Print. We worship at the altar of direct-response. We regard branding campaigns as a sacrilege and a cop-out.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="section values">
+  <section class="section values">
     <div class="container">
       <div class="row">
         <div class="one-third column value">
@@ -64,17 +74,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section get-help">
+  <section class="section get-help">
     <div class="container">
       <h3 class="section-heading">Need industry intel?</h3>
       <p class="section-description">We have compiled some of the most accurate insights in the lead-gen industry. A survey of 16,819 banner-ads, from 42,300 websites and apps, over 365 days.</p>
       <a class="button button-primary" href="http://taptapmobile.github.io/charts/index.html">Show me the stats</a>
     </div>
-  </div>
+  </section>
 
-  <div class="section categories">
+  <section class="section categories">
     <div class="container">
       <h3 class="section-heading">Full Retargeting Suite</h3>
       <p class="section-description">GDN, Facebook, Twitter, AOL, Microsoft and many more...</p>
@@ -84,7 +94,21 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  <script type="text/javascript">
+    (function($){
+      var top_nav = $('#top_nav');
+      function checkScrolled(){
+        if($(window).scrollTop() > 0){
+          top_nav.addClass('scrolled');
+        }else{
+          top_nav.removeClass('scrolled');
+        }
+      }
+      checkScrolled();
+      $(window).scroll(checkScrolled);
+    }(jQuery));
+  </script>
 </body>
 </html>
